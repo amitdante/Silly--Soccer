@@ -214,7 +214,7 @@ local function playerCollision( event )
         event.target.rotation = event.target.rotation + 180
     end
     player1Mechanics(event.target)
-    timer.performWithDelay( 500, function()
+    timer.performWithDelay( 1000, function()
         return colliderSetter(event)
     end,1)
 end
@@ -326,6 +326,9 @@ function scene:show( event )
     myData.pT = true
 
     if ( phase == "will" ) then
+        
+    myData.score1Text.text = "P1: "..myData.score1
+    myData.score2Text.text = "P2: "..myData.score2
 
     if(myData.groundIndex == 1) then
         myData.ground = display.newImage( "Assets/Ground/BG1.png" )
