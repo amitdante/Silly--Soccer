@@ -67,7 +67,7 @@ local function makeServer()
     Runtime:addEventListener("autolanPlayerDropped", playerDropped)
     Runtime:addEventListener("autolanPlayerJoined", addPlayer)
     Runtime:addEventListener("autolanReceived", serverReceived) --all incoming packets sent to serverReceived
-    sendFullFrameTimer = timer.performWithDelay(500, sendFullFrame, -1)
+    sendFullFrameTimer = timer.performWithDelay(250, sendFullFrame, -1)
 end
 ---------------------------UI OBJECTS--------------------
 local numberOfServers = 0
