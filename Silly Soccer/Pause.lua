@@ -22,6 +22,8 @@ local function mainMenuFunction( event )
     if(myData.sound) then
     audio.play( myData.menuSound )
 end
+    myData.score1 = 0
+    myData.score2 = 0
     myData.p1Ready = false
     myData.p2Ready = false
     myData.gameStarted = false
