@@ -168,8 +168,10 @@ local function ballCollision( event)
     end
         myData.score2 = myData.score2 + 1
         myData.score2Text.text = "P2: "..myData.score2
+        timer.performWithDelay(1,function ( )
         myData.ball.animation.x = display.contentWidth/2
         myData.ball.animation.y = display.contentHeight/2
+        end,1)
         composer.gotoScene( "Goal" )
         
         elseif(event.other.id == "goal2") then
@@ -178,8 +180,10 @@ local function ballCollision( event)
     end
         myData.score1 = myData.score1 + 1
         myData.score1Text.text = "P1: "..myData.score1
+        timer.performWithDelay(1,function ( )
         myData.ball.animation.x = display.contentWidth/2
         myData.ball.animation.y = display.contentHeight/2
+        end,1)
         composer.gotoScene( "Goal" )
 
       end  
